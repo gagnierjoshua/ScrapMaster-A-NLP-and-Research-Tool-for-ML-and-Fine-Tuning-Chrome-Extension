@@ -1,7 +1,8 @@
 //name of the extension, description, version, author, background script, permissions, and browser action
 
 //upgrading from version 2 to version 3 
-
+//https://developer.chrome.com/docs/extensions/develop/migrate 
+// migration dev info 
 {
 	"manifest_version": 3, //version of the manifest file, 3 is the latest version by google 
 
@@ -12,23 +13,24 @@
 	"action": { //action that will be taken when the extension is clicked
 		"default_popup": "popup/popup.html" //popup that will be displayed when the extension is clicked
 	},
-
-	"background": { //background script that will be ran in the background
-		"scripts": ["popup.js"],    //script that will be ran 
-		"persistent": true
+	"icons:"{  //icons that will be used for the extension
+		"16": "api.png", //16x16 pixel icon   (I would make these of different sizes for a finalized product)
+		"32": "api.png", //32x32 pixel icon
+		"48": "api.png", //48x48 pixel icon
+		"128": "api.png" //128x128 pixel icon
 	},
 
-	"permissions": [
-        "tabs",
-        "http://*/",
-        "https://*/"
-    ],
-	
-	
-	
-	
-	"browser_action": {
-		"default_icon": "api.png", //image to be used as icon, can be anything
-		"default_popup": "popup.html" 
-	}
+	"background": { 		//background script that will be ran in the background
+		"service_worker": "background.js", //background script that will be ran in the background
+		"type": "module"	//type of script that will be ran in the background
+	},	
+
+	//documentation on permissions: https://support.google.com/chrome/a/answer/7515036?hl=en
+	"permissions": [ //permissions that will be needed for the extension to run
+		"storage", //storage permission
+		"activeTab", //active tab permission
+		"scripting" //scripting permission
+	],
+
 }
+
