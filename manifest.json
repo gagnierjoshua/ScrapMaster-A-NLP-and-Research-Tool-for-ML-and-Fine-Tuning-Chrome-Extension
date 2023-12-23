@@ -1,12 +1,19 @@
+//name of the extension, description, version, author, background script, permissions, and browser action
+
+//upgrading from version 2 to version 3 
+
 {
-	"manifest_version": 2,
+	"manifest_version": 3, //version of the manifest file, 3 is the latest version by google 
 
-	"name": "API Filled App",
-	"description": "merge and integrating APIs into chrome extensions",
-	"version": "1.0",
-	"author": "gagnierjoshua",
+	"name": "API Filled App",  //name of the extension
+	"description": "merge and integrating APIs into chrome extensions", //description of the extension
+	"version": "1.0", //version of the extension
+	"author": "gagnierjoshua", 
+	"action": { //action that will be taken when the extension is clicked
+		"default_popup": "popup/popup.html" //popup that will be displayed when the extension is clicked
+	},
 
-	"background": {
+	"background": { //background script that will be ran in the background
 		"scripts": ["popup.js"],    //script that will be ran 
 		"persistent": true
 	},
@@ -16,6 +23,10 @@
         "http://*/",
         "https://*/"
     ],
+	
+	
+	
+	
 	"browser_action": {
 		"default_icon": "api.png", //image to be used as icon, can be anything
 		"default_popup": "popup.html" 
