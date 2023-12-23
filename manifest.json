@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+
+	"name": "API Filled App",
+	"description": "merge and integrating APIs into chrome extensions",
+	"version": "1.0",
+	"author": "gagnierjoshua",
+
+	"background": {
+		"scripts": ["popup.js"],    //script that will be ran 
+		"persistent": true
+	},
+
+	"permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+	"browser_action": {
+		"default_icon": "api.png", //image to be used as icon, can be anything
+		"default_popup": "popup.html" 
+	}
+}
