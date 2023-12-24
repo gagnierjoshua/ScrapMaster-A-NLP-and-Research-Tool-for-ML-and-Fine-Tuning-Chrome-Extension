@@ -4,10 +4,6 @@
 
 
 
-
-
-
-
 chrome.runtime.onMessage.addListener(data=> {
     switch(data.event){
         case 'onStop':
