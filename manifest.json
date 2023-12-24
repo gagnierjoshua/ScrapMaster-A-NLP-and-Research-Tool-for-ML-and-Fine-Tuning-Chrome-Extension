@@ -3,8 +3,10 @@
 //upgrading from version 2 to version 3 
 //https://developer.chrome.com/docs/extensions/develop/migrate 
 // migration dev info 
+//version of the manifest file, 3 is the latest version by google 
+
 {
-	"manifest_version": 3, //version of the manifest file, 3 is the latest version by google 
+	"manifest_version": 3, 
 
 	"name": "API Filled App",  //name of the extension
 	"description": "merge and integrating APIs into chrome extensions", //description of the extension
@@ -13,11 +15,13 @@
 	"action": { //action that will be taken when the extension is clicked
 		"default_popup": "popup/popup.html" //popup that will be displayed when the extension is clicked
 	},
-	"icons:"{  //icons that will be used for the extension
-		"16": "api.png", //16x16 pixel icon   (I would make these of different sizes for a finalized product)
-		"32": "api.png", //32x32 pixel icon
-		"48": "api.png", //48x48 pixel icon
-		"128": "api.png" //128x128 pixel icon
+
+	//icons that will be used for the extension, these are the icons that will be displayed in the browser
+	"icons":{  
+		"16": "images/16.png",// //16x16 pixel icon   (I would make these of different sizes for a finalized product)
+		//"32": "api.png", //32x32 pixel icon
+		"48": "images/48.png", //48x48 pixel icon
+		"128": "images/128.png" //128x128 pixel icon
 	},
 
 	"background": { 		//background script that will be ran in the background
@@ -30,7 +34,7 @@
 		"storage", //storage permission
 		"activeTab", //active tab permission
 		"scripting" //scripting permission
-	],
+	]
 
 }
 
