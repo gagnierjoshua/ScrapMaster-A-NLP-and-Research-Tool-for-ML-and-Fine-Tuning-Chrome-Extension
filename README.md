@@ -10,4 +10,4 @@ I decided to build out a Google Chrome extension because of how flexible they ar
 
 There is a desire for flexibility as well, where I could highlight very key points of text that are hyper-specific and tokenize them into a .csv on the spot how I want, or I can just slap entire web pages in at once. I can also compare similar texts that have the same 'content' but may have very different numbers of tokens very quickly choosing what to save or delete. 
 
-![image](https://github.com/gagnierjoshua/Chrome-Extension-w--API/assets/134977378/a1218c34-163b-4ad0-8425-36afbc8e106d)
+![Product Design- ScrapMaster](https://github.com/gagnierjoshua/Chrome-Extension-w--API/assets/134977378/73fecab3-cdc0-4815-ac7b-47e69029b8b3)
