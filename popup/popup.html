@@ -8,11 +8,111 @@
 
 	<!--https://bulma.io/documentation/components/navbar/-->
 </head>
+
+
 <body>
 
-	<div class="container">
+	<div class="container m-3"> 
+		<!--this is a html feature from bulma, with m-3 being a margin for centering -->
 		<h1 class="title">Basically a Scraper</h1>
+
+			<div class="field"> <!--a field class is a way to group form elements on a page together-->
+				<label class="label">Status</label>
+<!-- A div element is used for block-level organization and styling of page elements, 
+	whereas a span element is used for inline organization and styling.-->
+				<span class="tag is-primary">Running</span>
+				<span class="tag is-danger is-light">Stopped</span>
+<!--tag is a mini box that goes with it, where label is normal text, this is bulma-->
+			</div>
 	</div>
-	
+
+<!--Now, I need to think about what I want in descending arrangement (can modify later)
+Label for below scraper feature 1
+Drop down menu #1: items list:
+	-scraping
+	-stop words
+	-htl tags 
+	-urls 
+	-captalization
+	-website specific feature 
+	-hastags
+	-unicode characters
+	-xml tags 
+	-emojis
+	-emoticons
+	-symbols & pictographs
+	-transport & map symbols
+	-flags
+	-double spaces
+	-punctuation
+	-number removal 
+	-remove accented characters
+	-spell out contractions e.g., she'd to she would 
+
+Stemming
+Lemmatization
+
+Twitter specific:
+	-mentions
+	-number of likes (main post and individual posts)
+	-number of retweets (main post and individual posts)
+	-number of comments
+
+Wikipedia specific:
+	-links to metadata
+
+Reddit specific:
+	-Posts and Commets 
+	-User Profiles
+	-Upvotes and Downvotes
+	-Subreddit info
+	-Time Stamps
+
+scraper feature 2 
+Drop down menu #2 - Input Type
+	-URL 
+	-Copy & Paste 
+
+
+Label for below -
+Input box #1 
+
+Labeled Button #1 - Scrape & tokenizer
+
+-visualizer
+	-word cloud
+
+-clear labeled output of # of tokens
+	-number
+
+-Information
+	-spreadsheet 
+
+-count sheet for number of tokens 
+
+side by side labeled buttons
+-keep & delete
+
+
+
+
+-->
+	<div class="container m-3"> 
+		<div class="field">
+			<label class="label">URL</label>
+			<div class="select">
+				<select>
+					<option>https://www.google.com</option>
+					<option>https://www.yahoo.com</option>
+					<option>https://www.bing.com</option>
+				</select> 
+				<!--select is a drop down menu, option is the options in the drop down menu-->
+				
+
+
+			</div>
+		</div>
+
+
 </body>
 </html>
