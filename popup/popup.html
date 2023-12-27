@@ -9,12 +9,11 @@
 	<!--https://bulma.io/documentation/components/navbar/-->
 </head>
 
-
 <body>
 
 	<div class="container m-3"> 
 		<!--this is a html feature from bulma, with m-3 being a margin for centering -->
-		<h1 class="title">Basically a Scraper</h1>
+		<h1 class="title">ScrapMaster</h1>
 
 			<div class="field"> <!--a field class is a way to group form elements on a page together-->
 				<label class="label">Status</label>
@@ -26,93 +25,147 @@
 			</div>
 	</div>
 
-<!--Now, I need to think about what I want in descending arrangement (can modify later)
-Label for below scraper feature 1
-Drop down menu #1: items list:
-	-scraping
-	-stop words
-	-htl tags 
-	-urls 
-	-captalization
-	-website specific feature 
-	-hastags
-	-unicode characters
-	-xml tags 
-	-emojis
-	-emoticons
-	-symbols & pictographs
-	-transport & map symbols
-	-flags
-	-double spaces
-	-punctuation
-	-number removal 
-	-remove accented characters
-	-spell out contractions e.g., she'd to she would 
-
-Stemming
-Lemmatization
-
-Twitter specific:
-	-mentions
-	-number of likes (main post and individual posts)
-	-number of retweets (main post and individual posts)
-	-number of comments
-
-Wikipedia specific:
-	-links to metadata
-
-Reddit specific:
-	-Posts and Commets 
-	-User Profiles
-	-Upvotes and Downvotes
-	-Subreddit info
-	-Time Stamps
-
-scraper feature 2 
-Drop down menu #2 - Input Type
-	-URL 
-	-Copy & Paste 
-
-
-Label for below -
-Input box #1 
-
-Labeled Button #1 - Scrape & tokenizer
-
--visualizer
-	-word cloud
-
--clear labeled output of # of tokens
-	-number
-
--Information
-	-spreadsheet 
-
--count sheet for number of tokens 
-
-side by side labeled buttons
--keep & delete
-
-
-
-
--->
 	<div class="container m-3"> 
 		<div class="field">
-			<label class="label">URL</label>
+		<label class="label">Website type being scraped:</label>
 			<div class="select">
 				<select>
-					<option>https://www.google.com</option>
-					<option>https://www.yahoo.com</option>
-					<option>https://www.bing.com</option>
+					<option>Default Web Text</option>
+					<option>Wiki</option>
+					<option>Twitter</option>
+					<option>Facebook</option>
+					<option>Reddit</option>
+					<option>Email</option>
+					<option>Generic News Article</option>
+					<option>Textbook</option>
+					<option>Magazine</option>										
 				</select> 
 				<!--select is a drop down menu, option is the options in the drop down menu-->
-				
-
-
+		
 			</div>
 		</div>
+	</div>
 
+
+	<div class="container  m-3"> 
+		<div class="field">
+		<label class="label">Scraping Input Target:</label>
+			<div class="select">
+				<select>
+					<option>Active Page</option>
+					<option>Highlighted Content</option>
+					<option>Copy & Paste</option>
+					<option>Web Url</option>										
+				</select> 
+			</div>
+		</div>
+	</div>
+
+	<div class="container  m-3"> 
+		<div class="field">
+		<label class="label">Input Below:</label>
+		<input class="input is-primary" type="text" placeholder="paste input text here">
+		</div>
+	</div>
+
+	<div class="container  m-3"> 
+		<div class="field">
+		<label class="label">Text Cleaning Features:</label>
+		<div class="control">
+			<label class="radio">
+			  <input type="radio" name="foobar" checked>
+			  Basic
+			</label>
+			<label class="radio">
+			  <input type="radio" name="foobar">
+			  Advanced
+			</label><br>
+		  </div>
+		</div>
+	</div>
+
+
+	<div class="container  m-3"> 
+		<div class="field">	
+		<label class="checkbox">
+			<input type="checkbox">
+			Stop Word Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Remove Extra Spaces
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			URL Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Lowercase All Text
+	    </label><br>
+	<!-- Hidden checkboxes (hide later)-->		
+		<label class="checkbox">
+			<input type="checkbox">
+			Spell Out Contractions
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Lemmatization of Text
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Hashtag Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Unicode Character Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			XML Tag Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			HTML Tag Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Emoji Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Emoticon Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Symbol & Pictograph Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Transport & Map Symbol Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Punctuation Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Number Removal
+	    </label><br>
+		<label class="checkbox">
+			<input type="checkbox">
+			Accented Char Removal
+	    </label><br>		
+		</div>	
+	</div>
+
+	<div class="container  m-3"> 
+		<div class="field">
+		<button class="button is-full is-responsive">
+			Normal
+	  	</button>
+		</div>
+	</div>
 
 </body>
 </html>
