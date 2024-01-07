@@ -29,7 +29,7 @@
 		<div class="field">
 		<label class="label">Website type being scraped:</label>
 			<div class="select">
-				<select>
+				<select id="scrapeSource">
 					<option>Default Web Text</option>
 					<option>Wiki</option>
 					<option>Twitter</option>
@@ -51,7 +51,7 @@
 		<div class="field">
 		<label class="label">Scraping Input Target:</label>
 			<div class="select">
-				<select>
+				<select id="scrapeMethod">
 					<option>Active Page</option>
 					<option>Highlighted Content</option>
 					<option>Copy & Paste</option>
@@ -64,7 +64,7 @@
 	<div class="container  m-3"> 
 		<div class="field">
 		<label class="label">Input Below:</label>
-		<input class="input is-primary" type="text" placeholder="paste input text here">
+		<input class="input is-primary" type="text" placeholder="paste input text here" id="inputEntry">
 		</div>
 	</div>
 
@@ -73,11 +73,11 @@
 		<label class="label">Text Cleaning Features:</label>
 		<div class="control">
 			<label class="radio">
-			  <input type="radio" name="foobar" checked>
+			  <input type="radio" id="basicFeatures" name="foobar" checked>
 			  Basic
 			</label>
 			<label class="radio">
-			  <input type="radio" name="foobar">
+			  <input type="radio" id="advFeatures" name="foobar">
 			  Advanced
 			</label><br>
 		  </div>
@@ -87,72 +87,72 @@
 	<div class="container  m-3"> 
 		<div class="field">	
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="stopWord">
 			Stop Word Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="extraSpace">
 			Remove Extra Spaces
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="urlRemove">
 			URL Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="lowerCase">
 			Lowercase All Text
 	    </label><br>
 	<!-- Hidden checkboxes (hide later)-->		
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="outContractions">
 			Spell Out Contractions
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="lemmatizeText">
 			Lemmatization of Text
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="hashRemove">
 			Hashtag Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="unicodeRemove">
 			Unicode Character Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="xmlRemove">
 			XML Tag Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="htmlRemove">
 			HTML Tag Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="emojiRemove">
 			Emoji Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="emoticonRemove">
 			Emoticon Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="pictographRemove">
 			Symbol & Pictograph Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="mapSymbol">
 			Transport & Map Symbol Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="puncuationRemove">
 			Punctuation Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="numberRemove">
 			Number Removal
 	    </label><br>
 		<label class="checkbox">
-			<input type="checkbox">
+			<input type="checkbox" id="accentRemove">
 			Accented Char Removal
 	    </label><br>		
 		</div>	
@@ -160,11 +160,11 @@
 
 	<div class="container  m-3"> 
 		<div class="field">
-		<button class="button is-outlined is-primary is-rounded is-medium is-fullwidth">
+		<button class="button is-outlined is-primary is-rounded is-medium is-fullwidth" id="scrapecleanStart">
 			Normal
 		</button>
 		<!--hide & switch with above button after press-->
-		<button class="button is-outlined is-primary is-rounded is-medium is-fullwidth is-loading">
+		<button class="button is-outlined is-primary is-rounded is-medium is-fullwidth is-loading" id="scrapecleanInProg">
 			Loading
 		</button>
 		</div>
@@ -175,7 +175,7 @@
 			<label class="label is-small">
 				Current Action: ACTION
 			</label>
-			<progress class="progress is-info" value="30" max="100">
+			<progress class="progress is-info" value="30" max="100" id="progBar">
 				Progress
 			</progress>
 		</div>
@@ -185,7 +185,7 @@
 	<div class="container  m-3"> 
 		<div class="field">
 			<label class="label is-small">Data Comment:</label>
-			<input class="input is-info is-small" type="text" placeholder="Description Column">
+			<input class="input is-info is-small" type="text" placeholder="Description Column" id="userComment">
 		</div>
 	</div>
 
@@ -229,12 +229,12 @@
 	<div class="container m-3"> 	
 		<div class="field is-grouped">
 			<p class="control">
-		 	 <button class="button is-primary">
+		 	 <button class="button is-primary" id="saveAll">
 				Save Tokens & Data
 		 	 </button>
 			</p>
 			<p class="control">
-			  <button class="button is-danger">
+			  <button class="button is-danger" id="deleteAll">
 				Delete
 			  </button>
 			</p><br>
@@ -244,12 +244,12 @@
 		# of likes, comments, rewtweets, shares etc. -->	
 		<div class="field is-grouped">
 			<p class="control">
-		 	 <button class="button is-link">
+		 	 <button class="button is-link" id="dataOnly">
 				Save Data Only
 		 	 </button>
 			</p>
 			<p class="control">
-			  <button class="button is-link">
+			  <button class="button is-link" id="tokensOnly">
 				Save Tokens Only
 			  </button>
 			</p>
@@ -262,9 +262,9 @@
 			<label class="label is-small">
 				Please Enter any feedback or suggestions below:
 			</label>
-			<input class="input is-info is-small" type="text" placeholder="Feedback"><br>	
+			<input class="input is-info is-small" type="text" placeholder="Feedback" id="feedbackText"><br>	
 			
-			<button class="button is-small is-fullwidth">
+			<button class="button is-small is-fullwidth" id="feedbackSubmit">
 				Submit Feedback
 			</button>
 			<!--Show label below once feedback has been typed & button pressed	-->
@@ -282,4 +282,7 @@
 	</div>
 
 </body>
+
+<script src="popup.js"></script>
+
 </html>
