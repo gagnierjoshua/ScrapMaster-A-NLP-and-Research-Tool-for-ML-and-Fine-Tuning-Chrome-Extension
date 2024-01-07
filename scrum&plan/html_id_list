@@ -1,0 +1,78 @@
+scrapeSource = website type  e.g., wiki, default web, twitter, etc.
+scrapeMethod = input type e.g., copy paste, active url, highlighted content
+inputEntry= fillable box for webUrl or copy & pasted content
+basicFeatures = radio for basic cleaning features being toggled
+advFeatures = radio for advanced features being toggled
+
+** cleaning method checkboxes ** 
+--------------------------
+stopWord
+extraSpace
+urlRemove
+lowerCase
+outContractions
+lemmatizeText
+hashRemove
+unicodeRemove
+xmlRemove
+htmlRemove
+emojiRemove
+emoticonRemove
+pictographRemove
+mapSymbol
+puctuationRemove
+numberRemove
+accentRemove
+--------------------------
+scrapecleanStart = starts the cleaning process using the method above
+scrapecleanInProg = button turns into a loading button 
+
+progBar = progress bar , value should change as completion changes ** will need resisting
+
+userComment = csv column in output for comment 
+
+**need a id for %/# showing change in token number & token #**
+	<div class="container m-3"> 
+		<div class="field">	
+			<h1 class="subtitle is-1">#### Tokens</h1>
+			<label class="label is-small">
+				Your changes in/de/creased the number of tokens by: ####
+			</label>
+		</div>
+	</div>
+
+**need to fix so that this shows and loads file name that is uploaded**
+
+	<div class="container m-3"> 
+		<div class="field">
+			<label class="label is-small">
+				Please select a folder to save output (CSV):
+			</label>
+			<div class="file has-name is-fullwidth">
+				<label class="file-label">
+				  <input class="file-input" type="file" name="resume">
+				  <span class="file-cta">
+					<span class="file-icon">
+					  <i class="fas fa-upload"></i>
+					</span>
+					<span class="file-label">
+					  Choose a file…
+					</span>
+				  </span>
+				  <span class="file-name">
+					Folder_name_selected
+				  </span>
+				</label>
+			  </div>
+		</div>
+	</div>
+
+
+saveAll = save token & data associated with inputType
+deleteAll =  clear the page inputs
+dataOnly= saves data only associated with input type
+tokensOnly= saves tokens from page only & # of tokens as the 2 columns of csv export
+
+
+
+
