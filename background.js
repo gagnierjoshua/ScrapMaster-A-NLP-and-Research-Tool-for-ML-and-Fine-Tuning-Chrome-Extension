@@ -4,14 +4,12 @@
 
 
 
-chrome.runtime.onMessage.addListener(data=> {
-    switch(data.event){
-        case 'onStop':
-            console.log
-            break;
-        case 'onStart':
-            break;
-        default:
-            break;
-    }
+chrome.runtime.onMessage.addListener(data => {
+        switch(data.event){
+            case 'onStart':
+                console.log("onStart in background");
+                break;
+            default:
+                break;
+        }
 })

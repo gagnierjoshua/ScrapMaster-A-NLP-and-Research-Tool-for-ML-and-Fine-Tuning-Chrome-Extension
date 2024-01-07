@@ -23,7 +23,31 @@ const userCommentElement = document.getElementById('userComment');
 
 const basicFeaturesRadio = document.getElementById('basicFeatures'); 
 const advFeaturesRadio = document.getElementById('advFeatures');
+
+//------------OUR MAIN BUTTON TO SCRAPE AND CLEAN DATA ------------------//
 const scrapecleanStartButton= document.getElementById('scrapecleanStart');
+
+scrapecleanStartButton.onclick= function(){
+	console.log("scrapecleanStartButton clicked");
+	console.log("scrapeSourceElement.value: " + scrapeSourceElement.value);
+	console.log("scrapeMethodElement.value: " + scrapeMethodElement.value);
+
+	if (inputEntryElement.value){
+		chrome.runtime.sendMessage({event: 'onStart'});
+		console.log("inputEntryElement.value: " + inputEntryElement.value);
+		console.log("userCommentElement.value: " + userCommentElement.value);
+		
+	}
+	else{
+		console.log("Input Below: Box is Blank");
+	}
+
+}
+
+//-----------------------------------------------------------------------//	
+
+
+
 const scrapecleanInProgButton = document.getElementById('scrapecleanInProg');
 const saveAllButton = document.getElementById('saveAll');
 const deleteAllButton = document.getElementById('deleteAll'); 
