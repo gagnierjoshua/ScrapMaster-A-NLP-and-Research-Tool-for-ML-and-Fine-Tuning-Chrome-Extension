@@ -12,6 +12,11 @@ chrome.runtime.onMessage.addListener(function (message) {
 
 */
 
+
+
+
+
+
 //DATA INPUT ELEMENTS: Drop down menus, text boxes, etc
 
 const scrapeSourceElement = document.getElementById('scrapeSource');
@@ -63,7 +68,7 @@ scrapecleanStartButton.onclick = () => {
 	console.log("scrapeMethodElement.value: " + scrapeMethodElement.value);
 
 	if (inputEntryElement.value){
-
+		
 		console.log("inputEntryElement.value: " + inputEntryElement.value);
 		console.log("userCommentElement.value: " + userCommentElement.value);
 		const prefs = {

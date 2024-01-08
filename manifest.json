@@ -13,7 +13,7 @@
 	"version": "1.0", //version of the extension
 	"author": "gagnierjoshua", 
 	"action": { //action that will be taken when the extension is clicked
-		"default_popup": "popup/popup.html" //popup that will be displayed when the extension is clicked
+	"default_popup": "popup/popup.html" //popup that will be displayed when the extension is clicke
 	},
 
 	//icons that will be used for the extension, these are the icons that will be displayed in the browser
@@ -33,7 +33,9 @@
 	"permissions": [ //permissions that will be needed for the extension to run
 		"storage", //storage permission
 		"activeTab", //active tab permission
-		"scripting" //scripting permission
+		"scripting", //scripting permission
+		"https://api.api-ninjas.com/" //api permission
+
 	]
 
 }
