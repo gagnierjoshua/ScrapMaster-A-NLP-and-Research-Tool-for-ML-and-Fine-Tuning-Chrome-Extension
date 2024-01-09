@@ -35,7 +35,6 @@
 		"activeTab", //active tab permission
 		"scripting", //scripting permission
 		"https://api.api-ninjas.com/" //api permission
-
 	]
 
 }

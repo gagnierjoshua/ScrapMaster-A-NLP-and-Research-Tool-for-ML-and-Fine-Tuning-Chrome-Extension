@@ -4,10 +4,9 @@
 
 
 //API KEY & URL
-const apiKey="zpAJWuWgF++1OeTRzDpVnQ==NUdczhqSWGHOGpvU"
+const apiKey="zpAJWuWgF++1OeTRzDpVnQ==NUdczhqSWGHOGpvU";
 //free key with 10k calls per month :) not worried about it being public since it's free and will shut down afterwards
-const apiUrl="https://api.api-ninjas.com/v1/webscraper?url=https://example.com"
-
+const apiUrl="https://api.api-ninjas.com/v1/webscraper?url=https://example.com";
 
 chrome.runtime.onMessage.addListener(data => {
     const { event, prefs } = data;
@@ -29,20 +28,17 @@ const handleOnStart = (prefs) => {
 
 
     const url= apiUrl+prefs.inputEntry; //url is the api url plus the input entry
-    console.log(url); //log the url
+    
+    console.log(url);
+
     fetch(url, { //fetching the url
-        mode: 'no-cors',  //https://www.youtube.com/watch?v=PNtFSVU-YTI cors vs no cors 
+        method: "GET",
         headers: {  //headers for the api
             'X-API-KEY': apiKey  //api key
         }
     })
-    .then(response => response.json()) //response to json
-    .then(data => {  //data is the json
-        console.log(data); //log the result
-    })
-    .catch(error => { //catching errors
-        console.error('Request Failed', error);
-    });
+    const data = response.json();
+    console.log(data);
 
 };
 
